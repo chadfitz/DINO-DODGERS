@@ -12,7 +12,7 @@ this happens, the user's time will be displayed more prominently as their final 
 
 
 Functionality & MVPs  
-In {project name}, users will be able to:
+In Lazy Cat Attack, users will be able to:
   - control the lateral movement of two characters at the same time
   - toggle the sound on/off
   - read the directions at any point
@@ -56,7 +56,7 @@ Bonus Features
   - add different playable characters or cats
   - add different densities/fall speeds
 
-Live Project
+Live Project  
 ☐ Includes links to your portfolio website, Github, and LinkedIn.
 
 ☐ Landing page/modal with obvious, clear instructions.
@@ -67,7 +67,7 @@ Live Project
 
 ☐ If it has music, the option to mute or stop it.
 
-Production README
+Production README  
 ☐ Link to live version.
 
 ☐ Instructions on how to play/interact with the project.
