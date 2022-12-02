@@ -23,7 +23,7 @@ In addition, this project will include:
   - a production README
 
 
-Wireframe
+Wireframe  
   ![Alt text](./Capture.PNG)
 
   - About activates a pop-up with my name, links to the Github repo
