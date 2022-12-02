@@ -1,0 +1,37 @@
+{
+  "name": "js_project",
+  "version": "1.0.0",
+  "description": "Background:   I am creating a game where the user controls two characters at the same time, splitting the screen in half vertically. These characters will be dodging items falling down from the top of the canvas. The only inputs during play will be moving left and right. The left character will be  controlled using A/D and the right character will be controlled using left/right arrow keys. I am not sure whether it will be fluid left/right  movement or just two positions they jump between. I am also uncertain as to whether or not I should vary the densities (fall speed) of the objects.   Visually, my initial idea is to have two cats sitting at the top of the canvas with conveyor belts bringing them objects to swat down towards the characters. There should be a timer incrementing at the top during play, and the goal of the game is to last for as long as possible. When either  character gets hit by a falling item, it is game over. When this happens, the user's time will be displayed more prominently.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chadfitz/JS_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chadfitz/JS_Project/issues"
+  },
+  "homepage": "https://github.com/chadfitz/JS_Project#readme",
+  "dependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "core-js": "^3.26.1",
+    "css-loader": "^6.7.2",
+    "mini-css-extract-plugin": "^2.7.1",
+    "regenerator-runtime": "^0.13.11",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
