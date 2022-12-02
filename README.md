@@ -1,17 +1,17 @@
-Background:
+Background:  
   I am creating a game where the user controls two characters at the same time, splitting the screen in half vertically. 
 These characters will be dodging items falling down from the top of the canvas. The only inputs during play will be 
 moving left and right. The left character will be controlled using A(left)/D(right), and the right character will be 
 controlled using left/right arrow keys. Currently, I am not sure whether it will be fluid left/right movement or just 
 two positions they jump between. I am also uncertain as to whether or not I should vary the densities (fall speed) of 
-the objects.
+the objects.  
   Visually, my initial idea is to have two cats sitting at the top of the canvas with conveyor belts bringing them 
 objects to swat down towards the characters. There should be a timer incrementing at the top during play, and the goal 
 of the game is to last for as long as possible. When either character gets hit by a falling item, it is game over. When 
-this happens, the user's time will be displayed more prominently as their final score.
+this happens, the user's time will be displayed more prominently as their final score.  
 
 
-Functionality & MVPs
+Functionality & MVPs  
 In {project name}, users will be able to:
   - control the lateral movement of two characters at the same time
   - toggle the sound on/off
