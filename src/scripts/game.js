@@ -18,45 +18,22 @@ class Game {
     this.leftHazards = [];
     this.rightHazards = [];
     this.score = 0;
-    this.registerEvents();
-    this.pause.bind(this);
     this.addLeftHazard();
     this.addRightHazard();
-    this.restart();
+    this.setup();
   }
   
-  //after game over, restart the game
-  restart() {
-    this.running = false;
+  //after game over, setup the game
+  setup() {
     this.score = 0;
-    
     this.play();
-  }
-  
-  // binds the context of event handlers to the game class
-  registerEvents(){
-    this.boundClickHandler = this.click.bind(this);
-    this.ctx.canvas.addEventListener("click", this.boundClickHandler);
-  }
-  
-  click(){
-    if (!this.running) this.play();
-    else this.pause();
   }
   
   //start playing
   play(){
-    this.running = true;
     this.animate();
     //add 1 to the score every second
     this.scoreCounter = setInterval(()=>this.score += 1, 1000);
-  }
-  
-  //stop running animations and score counting
-  pause(){
-    clearInterval(this.scoreCounter);
-    clearInterval(this.leftHazardCounter);
-    this.running = false;
   }
 
   // gameOver(){
@@ -91,10 +68,9 @@ class Game {
     this.drawScore();
 
     const animate = requestAnimationFrame(this.animate.bind(this));
-    //stop animations if game is not running
-    if(!this.running){
-      cancelAnimationFrame(animate);
-    }
+
+    //cancelAnimationFrame(animate);
+
   }
 
   addLeftHazard(){
