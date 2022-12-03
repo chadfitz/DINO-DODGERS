@@ -1,17 +1,18 @@
 class Level {
-  constructor (dimensions){
-    this.dimensions = dimensions;
+  constructor (ctx, canvas){
+    this.ctx = ctx;
+    this.canvas = canvas;
   }
 
   //render the background
-  drawBackground(ctx){
-    ctx.fillStyle = "lightgreen";
-    ctx.fillRect(0, 0, this.dimensions.width, this.dimensions.height);
+  drawBackground(){
+    this.ctx.fillStyle = "lightgreen";
+    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
   //render the game level
-  animate(ctx){
-    this.drawBackground(ctx);
+  animate(){
+    this.drawBackground();
   }
 
   //returns true if either character hits a hazard

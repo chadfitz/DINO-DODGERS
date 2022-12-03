@@ -7,6 +7,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // canvas.height = window.innerHeight;
   // canvas.width = window.innerWidth;
 
-  new Game(canvas);
-  // console.log(ctx);
+  const game = new Game(canvas);
+
+  //add event listeners
+  // canvas.addEventListener("click", () => game.pause);
+  
+  function keydown(e){
+    e.preventDefault();
+    if (e.key === "ArrowRight") {
+        game.characterTwo.move("right");
+    }
+    if (e.key === "ArrowLeft") {
+      game.characterTwo.move("left");
+    }
+    if (e.key === "d") {
+      game.characterOne.move("right");
+    }
+    if (e.key === "a") {
+      game.characterOne.move("left");
+    }
+  }
+
+  document.addEventListener("keydown", keydown)
 })
