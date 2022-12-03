@@ -17,6 +17,7 @@ class Game {
     this.addLeftHazard();
     this.addRightHazard();
     this.gameOver();
+    this.scoreCounter();
     this.setup();
   }
   
@@ -26,12 +27,11 @@ class Game {
   }
   
   //start playing
-  play(){
-    this.animate();
+  scoreCounter(){
     this.scoreCounter = setInterval(()=>this.score += 1, 1000);
   }
 
-  animate(){
+  play(){
     //draw the level
     this.level.animate();
 
@@ -52,10 +52,8 @@ class Game {
     //draw the score
     this.drawScore();
 
-    const animate = requestAnimationFrame(this.animate.bind(this));
-
+    const animate = requestAnimationFrame(this.play.bind(this));
     //cancelAnimationFrame(animate);
-
   }
 
   addLeftHazard(){
@@ -72,17 +70,6 @@ class Game {
     this.rightHazardCounter = setInterval(() => {
       this.rightHazards.push(new RightHazard(this.ctx, this.canvas));
       }, 7000);
-  }
-
-  drawScore(){
-    const loc = { x: (this.canvas.width/2)-30, y: (this.canvas.height)/8 };
-    this.ctx.font = "bold 50pt sans-serif";
-    this.ctx.fillStyle = "black";
-    this.ctx.fillText(this.score, loc.x, loc.y);
-    //strokeStyle and linewidth are the color and width of the outline
-    this.ctx.strokeStyle = "white";
-    this.ctx.lineWidth = 2;
-    this.ctx.strokeText(this.score, loc.x, loc.y);
   }
 
   gameOver(){
@@ -102,6 +89,17 @@ class Game {
           hazard.y + hazard.height > this.characterTwo.y
         ) return true;
     })
+  }
+  
+  drawScore(){
+    const loc = { x: (this.canvas.width/2)-30, y: (this.canvas.height)/8 };
+    this.ctx.font = "bold 50pt sans-serif";
+    this.ctx.fillStyle = "black";
+    this.ctx.fillText(this.score, loc.x, loc.y);
+    //strokeStyle and linewidth are the color and width of the outline
+    this.ctx.strokeStyle = "white";
+    this.ctx.lineWidth = 2;
+    this.ctx.strokeText(this.score, loc.x, loc.y);
   }
 }
 
