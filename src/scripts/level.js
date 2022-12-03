@@ -1,11 +1,11 @@
-export default class Level {
+class Level {
   constructor (dimensions){
     this.dimensions = dimensions;
   }
 
   //render the background
   drawBackground(ctx){
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "lightgreen";
     ctx.fillRect(0, 0, this.dimensions.width, this.dimensions.height);
   }
 
@@ -15,7 +15,9 @@ export default class Level {
   }
 
   //returns true if either character hits a hazard
-  collideswith(characterOne, characterTwo){
-    //...
-  }
+  // collideswith(characterOne, characterTwo){
+  //   //...
+  // }
 }
+
+export default Level
