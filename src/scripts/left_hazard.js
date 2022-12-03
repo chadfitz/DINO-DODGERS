@@ -16,7 +16,7 @@ class LeftHazard {
     // console.log(this.vel);
   }
 
-  move(){
+  animate(){
     this.drawHazard();
     if (this.y === this.canvas.height/8) {
       if (this.x < this.canvas.width * 0.333) this.x += this.vel;

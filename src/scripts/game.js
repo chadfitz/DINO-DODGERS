@@ -54,12 +54,13 @@ class Game {
     this.running = false;
   }
 
-  // gameOver(){
-  //   return (
-  //     this.level.collidesWith(this.characterOne.bounds()) ||
-  //     this.level.collidesWith(this.characterTwo.bounds())
-  //   );
-  // }
+  gameOver(){
+    return (!(this.characterOne.x > this.hazard1.x + this.hazard1.width ||
+        this.characterOne.x + this.characterOne.width < this.hazard1.x ||
+        this.characterOne.y > this.hazard1.y + this.hazard1.height ||
+        this.characterOne.y + this.characterOne.height < this.hazard1.y
+      ))
+  }
 
   animate(){
     //draw the level
@@ -69,14 +70,15 @@ class Game {
     this.characterOne.drawCharacter();
     this.characterTwo.drawCharacter();
 
-    this.hazard1.move();
-    this.hazard2.move();
+    //create the falling hazards
+    this.hazard1.animate();
+    this.hazard2.animate();
 
     //check if game over => give player score => restart the game
-    // if (this.gameOver()){
-    //   alert(this.score);
-    //   this.restart();
-    // }
+    if (this.gameOver()){
+      alert(this.score);
+      this.restart();
+    }
 
     //draw the score
     this.drawScore();
