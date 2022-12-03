@@ -1,7 +1,8 @@
 import Level from "./level";
 import CharacterOne from "./character_one";
 import CharacterTwo from "./character_two";
-import Hazard from "./hazard";
+import LeftHazard from "./left_hazard";
+import RightHazard from "./right_hazard";
 
 class Game {
   //create new canvas and restart the game
@@ -12,7 +13,8 @@ class Game {
     this.level = new Level(this.ctx, this.canvas);
     this.characterOne = new CharacterOne(this.ctx, this.canvas, (this.canvas.width*0.25), 500);
     this.characterTwo = new CharacterTwo(this.ctx, this.canvas, (this.canvas.width*0.75), 500);
-    this.hazard1 = new Hazard(this.ctx, this.canvas)
+    this.hazard1 = new LeftHazard(this.ctx, this.canvas);
+    this.hazard2 = new RightHazard(this.ctx, this.canvas);
     this.score = 0;
     this.registerEvents();
     this.pause.bind(this);
@@ -68,6 +70,7 @@ class Game {
     this.characterTwo.drawCharacter();
 
     this.hazard1.move();
+    this.hazard2.move();
 
     //check if game over => give player score => restart the game
     // if (this.gameOver()){

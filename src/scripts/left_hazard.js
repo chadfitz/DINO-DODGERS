@@ -1,8 +1,8 @@
-class Hazard {
+class LeftHazard {
   constructor(ctx, canvas){
     this.ctx = ctx;
     this.canvas = canvas;
-    this.x = this.canvas.width-30;
+    this.x = 0;
     this.y = this.canvas.height/8;
     this.width = 15;
     this.height = 15;
@@ -19,20 +19,19 @@ class Hazard {
   move(){
     this.drawHazard();
     if (this.y === this.canvas.height/8) {
-      if (this.x > this.canvas.width * 0.667) this.x -= 2;
+      if (this.x < this.canvas.width * 0.333) this.x += this.vel;
       else {
-        this.y += 2;
-        this.x = (Math.random() * this.canvas.width/2) + this.canvas.width/2;
+        this.y += this.vel;
+        this.x = (Math.random() * this.canvas.width/2);
       }
     } else {
-      this.y += 2
+      this.y += this.vel;
     }
     if (this.y >= this.canvas.height) {
-      this.x = this.canvas.width;
+      this.x = 0;
       this.y = this.canvas.height/8;
-      console.log(this.y)
     }
   }
 }
 
-export default Hazard;
+export default LeftHazard;
