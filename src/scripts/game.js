@@ -32,28 +32,23 @@ class Game {
   }
 
   play(){
-    //draw the level
     this.level.animate();
 
-    //draw and move the characters
     this.characterOne.drawCharacter();
     this.characterTwo.drawCharacter();
 
-    //create the falling hazards
     this.leftHazards.forEach(hazard => hazard.animate());
     this.rightHazards.forEach(hazard => hazard.animate());
 
-    //check if game over => give player score => restart the game
-    // if (this.gameOver()){
-    //   alert(this.score);
-    //   this.restart();
-    // }
-
-    //draw the score
     this.drawScore();
 
     const animate = requestAnimationFrame(this.play.bind(this));
-    //cancelAnimationFrame(animate);
+
+    if (this.gameOver()){
+      alert(this.score);
+      cancelAnimationFrame(animate);
+      // this.setup();
+    }
   }
 
   addLeftHazard(){
@@ -73,13 +68,14 @@ class Game {
   }
 
   gameOver(){
+    let gameOver = false;
     this.leftHazards.forEach(hazard => {
       if(
         hazard.x < this.characterOne.x + this.characterOne.width &&
         hazard.x + hazard.width > this.characterOne.x &&
         hazard.y < this.characterOne.y + this.characterOne.height &&
         hazard.y + hazard.height > this.characterOne.y
-      ) return true
+      ) gameOver = true;
     })
     this.rightHazards.forEach(hazard => {
         if(
@@ -87,8 +83,9 @@ class Game {
           hazard.x + hazard.width > this.characterTwo.x &&
           hazard.y < this.characterTwo.y + this.characterTwo.height &&
           hazard.y + hazard.height > this.characterTwo.y
-        ) return true;
+        ) gameOver = true;
     })
+    return gameOver;
   }
   
   drawScore(){
