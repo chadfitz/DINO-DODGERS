@@ -3,6 +3,7 @@ import CharacterOne from "./character_one";
 import CharacterTwo from "./character_two";
 import LeftHazard from "./left_hazard";
 import RightHazard from "./right_hazard";
+import EndScreen from "./end_screen";
 
 class Game {
   constructor(canvas){
@@ -45,8 +46,9 @@ class Game {
     const animate = requestAnimationFrame(this.play.bind(this));
 
     if (this.gameOver()){
-      alert(this.score);
+      // alert(this.score);
       cancelAnimationFrame(animate);
+      return new EndScreen(this.ctx, this.canvas, this.score);
       // this.setup();
     }
   }
@@ -89,9 +91,10 @@ class Game {
   }
   
   drawScore(){
-    const loc = { x: (this.canvas.width/2)-30, y: (this.canvas.height)/8 };
+    const loc = { x: (this.canvas.width/2), y: (this.canvas.height)/8 };
     this.ctx.font = "bold 50pt sans-serif";
     this.ctx.fillStyle = "black";
+    this.ctx.textAlign = "center";
     this.ctx.fillText(this.score, loc.x, loc.y);
     //strokeStyle and linewidth are the color and width of the outline
     this.ctx.strokeStyle = "white";

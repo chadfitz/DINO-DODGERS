@@ -1,4 +1,3 @@
-//import Canvas from './scripts/canvas';
 import Game from './scripts/game.js';
 
 document.addEventListener("DOMContentLoaded", () => {
