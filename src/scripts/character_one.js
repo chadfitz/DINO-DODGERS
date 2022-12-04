@@ -1,3 +1,5 @@
+import { IdleRight } from "./characterStates";
+
 const animationStates = [
   { name: "idle", frames: 9 },
   { name: "run", frames: 8 },
@@ -12,17 +14,21 @@ class CharacterOne{
     this.x = this.canvas.width*0.25;
     this.y = this.canvas.height - this.height - 30;
     this.image = document.getElementById("base-dino")
-    this.characterSpeed = 15;
     this.frameX = 0;
     this.frameY = 0;
     // this.gameFrame = 0;
     // this.staggerFrames = 10;
+    this.characterSpeed = 15;
+    this.states = [new IdleRight(this)];
+    this.currentState = this.states[0];
+    this.currentState.enter();
   }
 
   move(input){
-    if (input === "right" && this.x < (this.canvas.width/2 - this.width)){
+    this.drawCharacter();
+    if (input.includes('d') && this.x < (this.canvas.width/2 - this.width)){
       this.x += this.characterSpeed;
-    } else if (input === "left" && this.x > 0) {
+    } else if (input.includes('a') && this.x > 0) {
       this.x -= this.characterSpeed;
     }
   }

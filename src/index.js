@@ -12,21 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
   //add event listeners
   // canvas.addEventListener("click", () => game.pause);
   
-  function keydown(e){
-    e.preventDefault();
-    if (e.key === "ArrowRight") {
-        game.characterTwo.move("right");
-    }
-    if (e.key === "ArrowLeft") {
-      game.characterTwo.move("left");
-    }
-    if (e.key === "d") {
-      game.characterOne.move("right");
-    }
-    if (e.key === "a") {
-      game.characterOne.move("left");
-    }
-  }
+  // function keydown(e){
+  //   e.preventDefault();
+  //   if (e.key === "ArrowRight") {
+  //       game.characterTwo.move("right");
+  //   }
+  //   if (e.key === "ArrowLeft") {
+  //     game.characterTwo.move("left");
+  //   }
+  //   if (e.key === "d") {
+  //     game.characterOne.move("right");
+  //   }
+  //   if (e.key === "a") {
+  //     game.characterOne.move("left");
+  //   }
+  // }
 
-  document.addEventListener("keydown", keydown)
+  // document.addEventListener("keydown", keydown)
 })

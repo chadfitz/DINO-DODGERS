@@ -1,0 +1,25 @@
+const states = {
+  IDLE_RIGHT: 0,
+  RUNNING_RIGHT: 1,
+  IDLE_LEFT: 2,
+  RUNNING_LEFT: 3   
+}
+
+class State {
+  constructor(state){
+    this.state = state;
+  }
+}
+
+export class IdleRight extends State {
+  constructor(characterOne){
+    super('IDLE_RIGHT');
+    this.characterOne = characterOne;
+  }
+  enter(){
+
+  }
+  handleInput(input){
+    
+  }
+}

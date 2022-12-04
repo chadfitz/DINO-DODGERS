@@ -4,9 +4,11 @@ import CharacterTwo from "./character_two";
 import LeftHazard from "./left_hazard";
 import RightHazard from "./right_hazard";
 import EndScreen from "./end_screen";
+import InputHandler from "./input";
 
 class Game {
   constructor(canvas){
+    this.input = new InputHandler();
     this.ctx = canvas.getContext('2d');
     this.canvas = canvas;
     this.level = new Level(this.ctx, this.canvas);
@@ -34,8 +36,10 @@ class Game {
   play(){
     this.level.animate();
 
-    this.characterOne.drawCharacter();
-    this.characterTwo.drawCharacter();
+    // this.characterOne.drawCharacter();
+    this.characterOne.move(this.input.keys);
+    // this.characterTwo.drawCharacter();
+    this.characterTwo.move(this.input.keys);
 
     this.leftHazards.forEach(hazard => hazard.animate());
     this.rightHazards.forEach(hazard => hazard.animate());
