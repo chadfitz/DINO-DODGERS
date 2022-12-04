@@ -3,7 +3,7 @@ class LeftHazard {
     this.ctx = ctx;
     this.canvas = canvas;
     this.x = 0;
-    this.y = this.canvas.height/8;
+    this.y = this.canvas.height;
     this.width = 15;
     this.height = 15;
     this.vel = 2;

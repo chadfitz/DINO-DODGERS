@@ -27,7 +27,6 @@ class Game {
     this.play();
   }
   
-  //start playing
   scoreCounter(){
     this.scoreCounter = setInterval(()=>this.score += 1, 1000);
   }

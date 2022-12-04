@@ -3,7 +3,7 @@ class RightHazard {
     this.ctx = ctx;
     this.canvas = canvas;
     this.x = this.canvas.width;
-    this.y = this.canvas.height/8;
+    this.y = this.canvas.height;
     this.width = 15;
     this.height = 15;
     this.vel = 2;
