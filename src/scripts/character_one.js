@@ -18,7 +18,8 @@ class CharacterOne{
     this.frameY = 0;
     // this.gameFrame = 0;
     // this.staggerFrames = 10;
-    this.characterSpeed = 15;
+    this.characterSpeed = 0;
+    this.characterMaxSpeed = 15;
     this.states = [new IdleRight(this)];
     this.currentState = this.states[0];
     this.currentState.enter();
@@ -27,9 +28,11 @@ class CharacterOne{
   move(input){
     this.drawCharacter();
     if (input.includes('d') && this.x < (this.canvas.width/2 - this.width)){
+      this.characterSpeed = this.characterMaxSpeed;
       this.x += this.characterSpeed;
     } else if (input.includes('a') && this.x > 0) {
-      this.x -= this.characterSpeed;
+      this.characterSpeed = -this.characterMaxSpeed;
+      this.x += this.characterSpeed;
     }
   }
 
