@@ -2,10 +2,10 @@ class CharacterTwo {
   constructor(ctx, canvas, x, y){
     this.ctx = ctx;
     this.canvas = canvas;
+    this.width = 60;
+    this.height = 60;
     this.x = x;
     this.y = y;
-    this.width = 30;
-    this.height = 30;
     this.characterSpeed = 15;
   }
 
@@ -15,7 +15,6 @@ class CharacterTwo {
     } else if (input === "left" && this.x > this.canvas.width/2 + this.width/2) {
       this.x -= this.characterSpeed;
     }
-
   }
 
   drawCharacter(){

@@ -10,3 +10,7 @@
 #game-canvas {
   border: 5px solid black;
 }
+
+#base-dino-run {
+  display: none;
+}

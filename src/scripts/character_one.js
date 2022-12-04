@@ -1,13 +1,13 @@
-class CharacterOne {
-  constructor(ctx, canvas, x, y){
+class CharacterOne{
+  constructor(ctx, canvas){
     this.ctx = ctx;
     this.canvas = canvas;
-    this.x = x;
-    this.y = y;
-    this.width = 30;
-    this.height = 30;
+    this.width = 108;
+    this.height = 75;
+    this.x = 0;
+    this.y = this.canvas.height - this.height - 30;
+    this.image = document.getElementById("base-dino-run")
     this.characterSpeed = 15;
-    this.maxSpeed = 15;
   }
 
   move(input){
@@ -19,10 +19,8 @@ class CharacterOne {
   }
 
   drawCharacter(){
-    this.ctx.fillStyle = "red";
-    this.ctx.fillRect(this.x, this.y, this.width, this.height);
-    //change this later!
+    this.ctx.drawImage(this.image, 0, 0, this.width, this.height, this.x, this.y, this.width, this.height);
   }
 }
 
-export default CharacterOne
+export default CharacterOne;
