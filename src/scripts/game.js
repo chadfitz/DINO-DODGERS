@@ -8,12 +8,12 @@ import InputHandler from "./input";
 
 class Game {
   constructor(canvas){
-    this.input = new InputHandler();
     this.ctx = canvas.getContext('2d');
     this.canvas = canvas;
     this.level = new Level(this.ctx, this.canvas);
+    this.input = new InputHandler();
     this.characterOne = new CharacterOne(this.ctx, this.canvas);
-    this.characterTwo = new CharacterTwo(this.ctx, this.canvas, (this.canvas.width*0.75), 500);
+    this.characterTwo = new CharacterTwo(this.ctx, this.canvas);
     this.leftHazards = [];
     this.rightHazards = [];
     this.score = 0;
@@ -37,8 +37,8 @@ class Game {
     this.level.animate();
 
     // this.characterOne.drawCharacter();
-    this.characterOne.move(this.input.keys);
     // this.characterTwo.drawCharacter();
+    this.characterOne.move(this.input.keys);
     this.characterTwo.move(this.input.keys);
 
     this.leftHazards.forEach(hazard => hazard.animate());
@@ -48,12 +48,12 @@ class Game {
 
     const animate = requestAnimationFrame(this.play.bind(this));
 
-    // if (this.gameOver()){
-    //   // alert(this.score);
-    //   cancelAnimationFrame(animate);
-    //   return new EndScreen(this.ctx, this.canvas, this.score);
-    //   // this.setup();
-    // }
+    if (this.gameOver()){
+      // alert(this.score);
+      cancelAnimationFrame(animate);
+      return new EndScreen(this.ctx, this.canvas, this.score);
+      // this.setup();
+    }
   }
 
   addLeftHazard(){
