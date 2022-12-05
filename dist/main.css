@@ -7,8 +7,42 @@
   box-sizing: border-box;
 }
 
+.window-box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.title {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-transform: uppercase;
+  font-size: 110px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: forestgreen;
+  text-shadow: 5px 5px 5px slategray;
+  transform: translate(0, 10%);
+}
+
+#window-background {
+  display: none;
+}
+
 #game-canvas {
-  border: 5px solid black;
+  border: 2px solid black;
+  border-radius: 20px;
+  transform: translate(0, 5%);
+}
+
+body {
+  background-color: black;
+  background-color: rgb(14, 3, 63);
+}
+
+#background {
+  display: none;
+  max-width: 100%;
+  max-width: 100%;
 }
 
 #base-dino {

@@ -36,8 +36,6 @@ class Game {
   play(){
     this.level.animate();
 
-    // this.characterOne.drawCharacter();
-    // this.characterTwo.drawCharacter();
     this.characterOne.move(this.input.keys);
     this.characterTwo.move(this.input.keys);
 
@@ -48,12 +46,10 @@ class Game {
 
     const animate = requestAnimationFrame(this.play.bind(this));
 
-    if (this.gameOver()){
-      // alert(this.score);
-      cancelAnimationFrame(animate);
-      return new EndScreen(this.ctx, this.canvas, this.score);
-      // this.setup();
-    }
+    // if (this.gameOver()){
+    //   cancelAnimationFrame(animate);
+    //   return new EndScreen(this.ctx, this.canvas, this.score);
+    // }
   }
 
   addLeftHazard(){
