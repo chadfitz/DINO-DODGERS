@@ -10,7 +10,24 @@
 .window-box {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+
+#linkedin-icon:hover {
+  transform: scale(1.25);
+}
+
+#github-icon:hover {
+  transform: scale(1.25);
 }
 
 .title {

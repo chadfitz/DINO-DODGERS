@@ -7,20 +7,34 @@
 .window-box{
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+
+#linkedin-icon:hover{
+  transform: scale(1.25);
+}
+
+#github-icon:hover{
+  transform: scale(1.25);
 }
 
 .title{
   text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-transform: uppercase;
-  // color: red;
-  // color: forestgreen;
   font-size: 110px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: forestgreen;
   text-shadow: 5px 5px 5px slategray;
-  // text-shadow: 5px 5px 5px darkgreen;
   transform: translate(0, 10%);
 }
 
