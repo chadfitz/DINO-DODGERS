@@ -43,6 +43,7 @@ class CharacterTwo {
       else this.frameX = 0;
     }
     this.gameFrame++;
+    // this.ctx.strokeRect(this.x, this.y, this.width, this.height);
   }
 }
 

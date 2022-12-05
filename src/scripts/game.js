@@ -47,10 +47,10 @@ class Game {
 
     const animate = requestAnimationFrame(this.play.bind(this));
 
-    if (this.gameOver()){
-      cancelAnimationFrame(animate);
-      return new EndScreen(this.ctx, this.canvas, this.score);
-    }
+    // if (this.gameOver()){
+    //   cancelAnimationFrame(animate);
+    //   return new EndScreen(this.ctx, this.canvas, this.score);
+    // }
   }
 
   addLeftHazard(){
@@ -73,18 +73,18 @@ class Game {
     let gameOver = false;
     this.leftHazards.forEach(hazard => {
       if(
-        hazard.x < this.characterOne.x + this.characterOne.width &&
+        hazard.x < this.characterOne.x + this.characterOne.width - 45 &&
         hazard.x + hazard.width > this.characterOne.x &&
-        hazard.y < this.characterOne.y + this.characterOne.height &&
-        hazard.y + hazard.height > this.characterOne.y
+        hazard.y + 115 < this.characterOne.y + this.characterOne.height - 7 &&
+        hazard.y + hazard.height - 10 > this.characterOne.y + 7
       ) gameOver = true;
     })
     this.rightHazards.forEach(hazard => {
         if(
-          hazard.x < this.characterTwo.x + this.characterTwo.width &&
-          hazard.x + hazard.width > this.characterTwo.x &&
+          hazard.x < this.characterTwo.x + this.characterTwo.width - 5 &&
+          hazard.x + hazard.width > this.characterTwo.x + 10 &&
           hazard.y < this.characterTwo.y + this.characterTwo.height &&
-          hazard.y + hazard.height > this.characterTwo.y
+          hazard.y + hazard.height > this.characterTwo.y + 5
         ) gameOver = true;
     })
     return gameOver;
