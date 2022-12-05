@@ -35,7 +35,7 @@ class Game {
   }
 
   play(){
-    this.level.animate();
+    this.level.drawBackground();
 
     this.characterOne.move(this.input.keys);
     this.characterTwo.move(this.input.keys);

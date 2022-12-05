@@ -5,13 +5,7 @@ class Level {
   }
 
   drawBackground(){
-    // this.ctx.fillStyle = "lightgreen";
-    // this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.ctx.drawImage(background, 0, 0, this.canvas.width, this.canvas.height);
-  }
-
-  animate(){
-    this.drawBackground();
   }
 }
 

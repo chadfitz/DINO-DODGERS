@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const background = document.getElementById("background");
   background.width = canvas.width;
   background.height = canvas.height;
-  
+
   const startScreen = new StartScreen(canvas, ctx);
 
   canvas.addEventListener("click", () => {
