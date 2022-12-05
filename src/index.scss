@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.window-box{
+.canvas-box{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,6 +18,10 @@
   align-items: center;
   padding-right: 10px;
 }
+
+// .links img{
+//   padding-bottom: 5px;
+// }
 
 #linkedin-icon:hover{
   transform: scale(1.25);
@@ -35,7 +39,7 @@
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: forestgreen;
   text-shadow: 5px 5px 5px slategray;
-  transform: translate(0, 10%);
+  // transform: translate(0, 10%);
 }
 
 #start-screen{
