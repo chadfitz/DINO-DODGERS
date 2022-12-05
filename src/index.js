@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   background.height = canvas.height;
 
   const startScreen = new StartScreen(canvas, ctx);
+  startScreen.renderStartScreen();
 
   canvas.addEventListener("click", () => {
     const game = new Game(canvas, ctx);

@@ -91,15 +91,18 @@ class Game {
   }
   
   drawScore(){
-    const loc = { x: (this.canvas.width/2), y: (this.canvas.height)/8 };
-    this.ctx.font = "bold 50pt sans-serif";
-    this.ctx.fillStyle = "black";
+    const loc = { x: (this.canvas.width/2), y: (this.canvas.height)/5 };
     this.ctx.textAlign = "center";
+    this.ctx.font = "bold 100pt sans-serif";
+    this.ctx.fillStyle = "black";
     this.ctx.fillText(this.score, loc.x, loc.y);
-    //strokeStyle and linewidth are the color and width of the outline
-    this.ctx.strokeStyle = "white";
-    this.ctx.lineWidth = 2;
+    this.ctx.strokeStyle = "forestgreen";
+    this.ctx.lineWidth = 5;
     this.ctx.strokeText(this.score, loc.x, loc.y);
+    // this.ctx.shadowColor = "slategray";
+    // this.ctx.shadowOffsetX = 1;
+    // this.ctx.shadowOffsetY = 1;
+    // this.ctx.shadowBlur = 1;
   }
 }
 
