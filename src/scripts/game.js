@@ -1,15 +1,16 @@
+// import StartScreen from "./startScreen";
 import Level from "./level";
-import CharacterOne from "./character_one";
-import CharacterTwo from "./character_two";
-import LeftHazard from "./left_hazard";
-import RightHazard from "./right_hazard";
-import EndScreen from "./end_screen";
+import CharacterOne from "./characterOne";
+import CharacterTwo from "./characterTwo";
+import LeftHazard from "./leftHazard";
+import RightHazard from "./rightHazard";
+import EndScreen from "./endScreen";
 import InputHandler from "./input";
 
 class Game {
-  constructor(canvas){
-    this.ctx = canvas.getContext('2d');
+  constructor(canvas, ctx){
     this.canvas = canvas;
+    this.ctx = ctx;
     this.level = new Level(this.ctx, this.canvas);
     this.input = new InputHandler();
     this.characterOne = new CharacterOne(this.ctx, this.canvas);
@@ -46,10 +47,10 @@ class Game {
 
     const animate = requestAnimationFrame(this.play.bind(this));
 
-    // if (this.gameOver()){
-    //   cancelAnimationFrame(animate);
-    //   return new EndScreen(this.ctx, this.canvas, this.score);
-    // }
+    if (this.gameOver()){
+      cancelAnimationFrame(animate);
+      return new EndScreen(this.ctx, this.canvas, this.score);
+    }
   }
 
   addLeftHazard(){
