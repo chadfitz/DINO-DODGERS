@@ -24,14 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextSongIcon = document.getElementById("next");
   const prevSongIcon = document.getElementById("prev");
   const musicSources = [
-    "./src/music/makai-symphony-dragon-slayer.mp3",
+    "./src/music/ES_Tiger Tracks - Lexica.mp3",
     "./src/music/Monkeys-Spinning-Monkeys.mp3",
-    "./src/music/stranger-things-124008.mp3"
-  ];
+    "./src/music/makai-symphony-dragon-slayer.mp3",
+    "./src/music/ES_Astrophage - Lupus Nocte.mp3"
+    ];
   let currentSong = 0;
 
-  // music.autoplay = true;
-  // music.load();
+  music.autoplay = true;
+  music.load();
   
   musicIcon.addEventListener("click", () => {
     if (music.paused){
