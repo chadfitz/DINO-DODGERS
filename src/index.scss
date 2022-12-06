@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+#background{
+  display: none;
+  max-width: 100%;
+  max-width: 100%;
+}
+
+#base-dino{
+  display: none;
+}
+
+#cyborg-dino{
+  display: none;
+}
+
+body {
+  text-align: center;
+}
+
 .canvas-box{
   display: flex;
   justify-content: center;
@@ -11,22 +29,33 @@
   padding: 10px;
 }
 
-.links{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-right: 10px;
-}
+// .links{
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding-right: 10px;
+// }
 
 // .links img{
-//   padding-bottom: 5px;
+//   padding-right: 5px;
+//   align-self: start;
 // }
+
+.signature{
+  font-size: 25px;
+  color:rgb(195, 194, 216);
+}
 
 #music-icon{
   // padding-left: 10px;
   transform: translate(10px, 0px);
   align-self: baseline;
+}
+
+#music-icon:hover{
+  transform: scale(1.25);
+  cursor: pointer;
 }
 
 #linkedin-icon:hover{
@@ -35,11 +64,6 @@
 
 #github-icon:hover{
   transform: scale(1.25);
-}
-
-#music-icon:hover{
-  transform: scale(1.25);
-  cursor: pointer;
 }
 
 .title{
@@ -66,18 +90,4 @@
   border: 2px solid black;
   border-radius: 20px;
   // transform: translate(0, 5%);
-}
-
-#background{
-  display: none;
-  max-width: 100%;
-  max-width: 100%;
-}
-
-#base-dino{
-  display: none;
-}
-
-#cyborg-dino{
-  display: none;
 }
