@@ -22,12 +22,22 @@
   padding-right: 10px;
 }
 
+#music-icon {
+  transform: translate(10px, 0px);
+  align-self: baseline;
+}
+
 #linkedin-icon:hover {
   transform: scale(1.25);
 }
 
 #github-icon:hover {
   transform: scale(1.25);
+}
+
+#music-icon:hover {
+  transform: scale(1.25);
+  cursor: pointer;
 }
 
 .title {
@@ -51,12 +61,6 @@
 #game-canvas {
   border: 2px solid black;
   border-radius: 20px;
-  transform: translate(0, 5%);
-}
-
-body {
-  background-color: black;
-  background-color: rgb(14, 3, 63);
 }
 
 #background {

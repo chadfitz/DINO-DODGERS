@@ -12,6 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
   background.width = canvas.width;
   background.height = canvas.height;
 
+  const musicIcon = document.getElementById("music-icon");
+  const music = document.getElementById("music");
+
+  // music.autoplay = true;
+  // music.load();
+
+  musicIcon.addEventListener("click", () => {
+    if (music.paused){
+      music.play();
+      musicIcon.src = "./src/icons/music.png";
+    } else {
+      music.pause();
+      musicIcon.src = "./src/icons/music_off.png";
+    }
+  })
+
   const startScreen = new StartScreen(canvas, ctx);
   startScreen.renderStartScreen();
 

@@ -9,7 +9,7 @@ class LeftHazard {
     this.hazard.src = this.hazardPics[Math.floor(Math.random() * this.hazardPics.length)];
     this.width = 50;
     this.height = 157;
-    this.vel = Math.random() * 4;
+    this.vel = (Math.random() * 2) + 2;
   }
 
   drawHazard(){

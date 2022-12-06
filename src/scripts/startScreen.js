@@ -3,7 +3,7 @@ class StartScreen {
     this.canvas = canvas;
     this.ctx = ctx;
     this.background = new Image();
-    this.background.src = "./src/backgrounds/start_screen_background.jpg"
+    this.background.src = "./src/backgrounds/start_screen_background_v2.png"
   }
 
   renderStartScreen(){

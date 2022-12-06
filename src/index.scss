@@ -23,12 +23,23 @@
 //   padding-bottom: 5px;
 // }
 
+#music-icon{
+  // padding-left: 10px;
+  transform: translate(10px, 0px);
+  align-self: baseline;
+}
+
 #linkedin-icon:hover{
   transform: scale(1.25);
 }
 
 #github-icon:hover{
   transform: scale(1.25);
+}
+
+#music-icon:hover{
+  transform: scale(1.25);
+  cursor: pointer;
 }
 
 .title{
@@ -51,15 +62,10 @@
 }
 
 #game-canvas{
+  // position: absolute;
   border: 2px solid black;
   border-radius: 20px;
-  transform: translate(0, 5%);
-}
-
-body {
-  // background-color: darkseagreen;
-  background-color: black;
-  background-color: rgb(14, 3, 63);
+  // transform: translate(0, 5%);
 }
 
 #background{
