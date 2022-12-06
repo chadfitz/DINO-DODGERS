@@ -23,7 +23,7 @@ class LeftHazard {
       this.y += this.vel;
     } else {
       this.y = -this.height;
-      this.vel = Math.random() * 4;
+      this.vel = (Math.random() * 2) + 2;
     }
   }
 }

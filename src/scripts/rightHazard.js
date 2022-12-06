@@ -18,12 +18,12 @@ class RightHazard {
 
   animate(){
     this.drawHazard();
-    if (this.y === 0) this.x = (Math.random() * this.canvas.width/2) + this.canvas.width/2;
+    if (this.y === -this.height) this.x = (Math.random() * this.canvas.width/2) + this.canvas.width/2;
     if (this.y < this.canvas.height) {
       this.y += this.vel;
     } else {
-      this.y = 0;
-      this.vel = Math.random() * 4;
+      this.y = -this.height;
+      this.vel = (Math.random() * 2) + 2;
     }
   }
 }

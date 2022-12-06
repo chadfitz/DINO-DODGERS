@@ -47,10 +47,10 @@ class Game {
 
     const animate = requestAnimationFrame(this.play.bind(this));
 
-    if (this.gameOver()){
-      cancelAnimationFrame(animate);
-      return new EndScreen(this.ctx, this.canvas, this.score);
-    }
+    // if (this.gameOver()){
+    //   cancelAnimationFrame(animate);
+    //   return new EndScreen(this.ctx, this.canvas, this.score);
+    // }
   }
 
   addLeftHazard(){
