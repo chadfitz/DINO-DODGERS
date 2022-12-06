@@ -5,7 +5,7 @@ import CharacterTwo from "./characterTwo";
 import LeftHazard from "./leftHazard";
 import RightHazard from "./rightHazard";
 import EndScreen from "./endScreen";
-import InputHandler from "./input";
+import InputHandler from "./inputHandler";
 
 class Game {
   constructor(canvas, ctx){

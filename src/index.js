@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const musicIcon = document.getElementById("music-icon");
   const music = document.getElementById("music");
 
-  // music.autoplay = true;
+  music.autoplay = true;
   // music.load();
 
   musicIcon.addEventListener("click", () => {
