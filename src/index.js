@@ -11,13 +11,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const background = document.getElementById("background");
   background.width = canvas.width;
   background.height = canvas.height;
+  
+    const startScreen = new StartScreen(canvas, ctx);
+    startScreen.renderStartScreen();
+  
+    canvas.addEventListener("click", () => {
+      const game = new Game(canvas, ctx);
+    })
 
-  const musicIcon = document.getElementById("music-icon");
   const music = document.getElementById("music");
+  const musicIcon = document.getElementById("music-icon");
+  const nextSongIcon = document.getElementById("next");
+  const prevSongIcon = document.getElementById("prev");
+  const musicSources = [
+    "./src/music/makai-symphony-dragon-slayer.mp3",
+    "./src/music/Monkeys-Spinning-Monkeys.mp3",
+    "./src/music/stranger-things-124008.mp3"
+  ];
+  let currentSong = 0;
 
   // music.autoplay = true;
   // music.load();
-
+  
   musicIcon.addEventListener("click", () => {
     if (music.paused){
       music.play();
@@ -27,14 +42,21 @@ document.addEventListener("DOMContentLoaded", () => {
       musicIcon.src = "./src/icons/music_off.png";
     }
   })
-
-  const startScreen = new StartScreen(canvas, ctx);
-  startScreen.renderStartScreen();
-
-  canvas.addEventListener("click", () => {
-    const game = new Game(canvas, ctx);
+  
+  nextSongIcon.addEventListener("click", () => {
+    currentSong++;
+    music.src = musicSources[currentSong % musicSources.length];
+    music.play();
+    musicIcon.src = "./src/icons/music.png";
   })
 
+  prevSongIcon.addEventListener("click", () => {
+    currentSong--;
+    music.src = musicSources[currentSong % musicSources.length];
+    music.play();
+    musicIcon.src = "./src/icons/music.png";
+  })
+  
 
   document.body.style.backgroundImage = "url('./src/backgrounds/space.jpg')";
   document.body.style.backgroundSize = "cover";

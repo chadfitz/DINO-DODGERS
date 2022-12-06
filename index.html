@@ -5,25 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/dist/main.css">
+  <link rel="shortcut icon" href="#">
   <script src="./dist/main.js"></script>
   <title>DINO DODGERS</title>
 </head>
 <body>
   <h1 class="title">Dino Dodgers</h1>
     <div class="canvas-box">
-
-      <!-- <div class ="links">
-        <a href="https://www.linkedin.com/in/chad-fitzgerald-956981ab/"><img id="linkedin-icon" src="./src/icons/linkedin.png" style="width:50px;height:50px;"></a>
-        <a href="https://github.com/chadfitz"><img id="github-icon" src="./src/icons/github-mark-white.png" style="width:50px;height:50px;"></a>
-      </div> -->
       
       <canvas id="game-canvas"></canvas>
-
-      <img id="music-icon" src="./src/icons/music.png" style="width:50px;height:50px;">
-      <audio id="music" loop> 
-        <source src="./src/music/makai-symphony-dragon-slayer.mp3">
-      </audio>
-
+      <div id="music-icons">
+        <img id="music-icon" src="./src/icons/music.png" style="width:50px;height:50px;">
+        <audio id="music" loop> 
+          <source src="./src/music/makai-symphony-dragon-slayer.mp3">
+        </audio>
+        <div id="music-nav-icons">
+          <img id="prev" src="./src/icons/prev.png" style="width:25px;height:25px;">
+          <img id="next" src="./src/icons/next.png" style="width:25px;height:25px;">
+        </div>
+      </div>
       <!-- <nav>
         <ul class="menu-buttons">
           <li id="play-button">Play</li>

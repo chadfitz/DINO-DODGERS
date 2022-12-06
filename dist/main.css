@@ -33,16 +33,34 @@ body {
 }
 
 .signature {
+  font-family: Impact, Haettenschweiler, sans-serif;
   font-size: 25px;
-  color: rgb(195, 194, 216);
+  color: rgb(223, 222, 233);
 }
 
-#music-icon {
+#music-icons {
   transform: translate(10px, 0px);
   align-self: baseline;
+  display: flex;
+  flex-direction: column;
+}
+
+#music-nav-icons {
+  display: flex;
+  gap: 1px;
 }
 
 #music-icon:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+#next:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+#prev:hover {
   transform: scale(1.25);
   cursor: pointer;
 }
