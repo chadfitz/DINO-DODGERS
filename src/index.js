@@ -12,12 +12,41 @@ document.addEventListener("DOMContentLoaded", () => {
   background.width = canvas.width;
   background.height = canvas.height;
   
-    const startScreen = new StartScreen(canvas, ctx);
-    startScreen.renderStartScreen();
-  
-    canvas.addEventListener("click", () => {
-      const game = new Game(canvas, ctx);
-    })
+  const startScreen = new StartScreen(canvas, ctx);
+  startScreen.renderStartScreen();
+
+  const menuButtons = document.querySelector(".menu-buttons");
+  const playButton = document.getElementById("play-button");
+  const instructionsButton = document.getElementById("instructions-button");
+
+  const backButton = document.getElementById("back-button");
+
+  playButton.addEventListener("click", () => {
+    const game = new Game(canvas, ctx);
+    menuButtons.style.display = "none";
+  })
+
+  instructionsButton.addEventListener("click", () => {
+    const instructions = document.getElementById("instructions");
+    ctx.drawImage(instructions, 0, 0, canvas.width, canvas.height);
+    menuButtons.style.display = "none";
+    // backButton.classList.remove("hidden");
+    backButton.style.display = "block";
+
+    // instructions.style.display = "block";
+    // instructions.classList.remove("hidden");
+    // menuButton.classList.remove("hidden");
+  })
+
+  backButton.addEventListener("click", () => {
+    ctx.drawImage(startScreen.background, 0, 0, canvas.width, canvas.height);
+    backButton.style.display = "none";
+    menuButtons.style.display = "block";
+  })
+
+  // canvas.addEventListener("click", () => {
+  //   const game = new Game(canvas, ctx);
+  // })
 
   const music = document.getElementById("music");
   const musicIcon = document.getElementById("music-icon");
@@ -31,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
   let currentSong = 0;
 
-  music.autoplay = true;
-  music.load();
+  // music.autoplay = true;
+  // music.load();
   
   musicIcon.addEventListener("click", () => {
     if (music.paused){
