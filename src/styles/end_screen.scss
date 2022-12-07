@@ -1,0 +1,60 @@
+#play-again-button{
+  display: block;
+  margin: 0px auto;
+  position: absolute;
+  right: 52.5%;
+  bottom: 15%;
+  height: 115px;
+  width: 350px;
+  padding-bottom: 5px;
+  color: black;
+  font-family: monospace;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: forestgreen;
+  font-size: 45pt;
+  text-shadow: 2px 2px #494949;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  line-height: 95%;
+  transition: all .3s ease-in-out 0s;
+  background-size: 200% auto;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #1b9c2c 0%, #76e967  51%, #1b9c2c  100%);
+  cursor: pointer;
+  touch-action: manipulation
+}
+
+#back-to-menu-button{
+  // display: none;
+  display: block;
+  margin: 0px auto;
+  position: absolute;
+  left: 52.5%;
+  bottom: 15%;
+  height: 115px;
+  width: 350px;
+  padding-bottom: 5px;
+  color: black;
+  font-family: monospace;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: forestgreen;
+  font-size: 45pt;
+  text-shadow: 2px 2px #494949;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  line-height: 95%;
+  transition: all .3s ease-in-out 0s;
+  background-size: 200% auto;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #1b9c2c 0%, #76e967  51%, #1b9c2c  100%);
+  cursor: pointer;
+  touch-action: manipulation
+}
+
+#play-again-button:hover, #back-to-menu-button:hover{
+  transform: translateY(-6px);
+  background-position: right center;
+  text-decoration: none;
+}

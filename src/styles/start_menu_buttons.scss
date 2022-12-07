@@ -16,10 +16,15 @@
   padding:20px;
   margin: 10px;
   color: white;
-  font-family:"Trebuchet MS",Arial,Verdana;
-  text-shadow:1px 1px #494949;
+  color: black;
+  // font-family:"Trebuchet MS",Arial,Verdana;
+  font-family: monospace;
+  font-size: large;
+  // -webkit-text-stroke-width: 0.25px;
+  // -webkit-text-stroke-color: forestgreen;
+  text-shadow:0.5px 0.5px #494949;
   text-transform:uppercase;
-  letter-spacing:1.3px;
+  letter-spacing:1px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;

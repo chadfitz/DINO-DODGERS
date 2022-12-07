@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const difficultyButton = document.getElementById("difficulty-button");
   const sourcesButton = document.getElementById("sources-button");
   const backButton = document.getElementById("back-button");
-
+  const endScreenButtons = document.querySelector(".end-screen-buttons");
+  const playAgainButton = document.getElementById("play-again-button");
+  const backToMenuButton = document.getElementById("back-to-menu-button");
+  
   playButton.addEventListener("click", () => {
     const game = new Game(canvas, ctx);
     menuButtons.style.display = "none";
@@ -51,6 +54,19 @@ document.addEventListener("DOMContentLoaded", () => {
     ctx.drawImage(sources, 0, 0, canvas.width, canvas.height);
     menuButtons.style.display = "none";
     backButton.style.display = "block";
+  })
+
+  playAgainButton.addEventListener("click", () => {
+    const game = new Game(canvas, ctx);
+    menuButtons.style.display = "none";
+    endScreenButtons.style.display = "none";
+  })
+
+  backToMenuButton.addEventListener("click", () => {
+    ctx.drawImage(startScreen.background, 0, 0, canvas.width, canvas.height);
+    backButton.style.display = "none";
+    menuButtons.style.display = "block";
+    endScreenButtons.style.display = "none";
   })
 
   const music = document.getElementById("music");
