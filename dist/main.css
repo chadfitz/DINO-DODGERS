@@ -1,6 +1,11 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+.marie {
+  color: white;
+  font-size: 1px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +21,18 @@
 }
 
 #cyborg-dino {
+  display: none;
+}
+
+#instructions {
+  display: none;
+}
+
+#difficulty-select {
+  display: none;
+}
+
+#sources {
   display: none;
 }
 
@@ -137,20 +154,6 @@ body {
   transform: translateY(-6px);
   background-position: right center;
   text-decoration: none;
-}
-
-#instructions {
-  display: none;
-}
-
-#difficulty-select {
-  position: absolute;
-  right: 13%;
-  top: 37%;
-  color: #d9d9d9;
-  margin: 0 auto;
-  width: 470px;
-  height: 375px;
 }
 
 #back-button {

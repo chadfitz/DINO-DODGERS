@@ -1,3 +1,8 @@
+.marie{
+  color: white;
+  font-size: 1px;
+}
+
 * {
   margin:0;
   padding:0;
@@ -16,25 +21,21 @@
   display: none;
 }
 
-#game-canvas{
-  // position: absolute;
-  // border: 2px solid black;
-  border-radius: 20px;
-  // transform: translate(0, 5%);
+#instructions{
+  display: none;
 }
 
-// .links{
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   padding-right: 10px;
-// }
+#difficulty-select{
+  display: none;
+}
 
-// .links img{
-//   padding-right: 5px;
-//   align-self: center;
-// }
+#sources{
+  display: none;
+}
+
+#game-canvas{
+  border-radius: 20px;
+}
 
 .signature{
   margin-top: 5px;
@@ -45,7 +46,6 @@
 }
 
 #music-icons{
-  // padding-left: 10px;
   transform: translate(10px, 0px);
   align-self: baseline;
   display: flex;
@@ -161,22 +161,7 @@ body{
   text-decoration: none;
 }
 
-#instructions{
-  display: none;
-}
-
-#difficulty-select{
-  position: absolute;
-  right: 13%;
-  top: 37%;
-  color: #d9d9d9;
-  margin: 0 auto;
-  width: 470px;
-  height: 375px
-}
-
 #back-button{
-  // display: block;
   display: none;
   margin: 0px auto;
   position: absolute;

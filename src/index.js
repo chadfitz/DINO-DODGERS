@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuButtons = document.querySelector(".menu-buttons");
   const playButton = document.getElementById("play-button");
   const instructionsButton = document.getElementById("instructions-button");
-  // const difficultyButton = document.getElementById("difficulty-button");
+  const difficultyButton = document.getElementById("difficulty-button");
+  const sourcesButton = document.getElementById("sources-button");
   const backButton = document.getElementById("back-button");
 
   playButton.addEventListener("click", () => {
@@ -30,13 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const instructions = document.getElementById("instructions");
     ctx.drawImage(instructions, 0, 0, canvas.width, canvas.height);
     menuButtons.style.display = "none";
-    // backButton.classList.remove("hidden");
-    backButton.style.display = "block";
-
-    // instructions.style.display = "block";
-    // instructions.classList.remove("hidden");
-    // menuButton.classList.remove("hidden");
-  })
+    backButton.style.display = "block";  })
 
   backButton.addEventListener("click", () => {
     ctx.drawImage(startScreen.background, 0, 0, canvas.width, canvas.height);
@@ -44,16 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButtons.style.display = "block";
   })
 
-  // difficultyButton.addEventListener("click", () => {
-  //   const difficultySelect = document.getElementById("difficulty-select");
-  //   ctx.drawImage(difficultySelect, 0, 0, canvas.width, canvas.height);
-  //   menuButtons.style.display = "none";
-  //   backButton.style.display = "block";
-  // })
+  difficultyButton.addEventListener("click", () => {
+    const difficultySelect = document.getElementById("difficulty-select");
+    ctx.drawImage(difficultySelect, 0, 0, canvas.width, canvas.height);
+    menuButtons.style.display = "none";
+    backButton.style.display = "block";
+  })
 
-  // canvas.addEventListener("click", () => {
-  //   const game = new Game(canvas, ctx);
-  // })
+  sourcesButton.addEventListener("click", () => {
+    const sources = document.getElementById("sources");
+    ctx.drawImage(sources, 0, 0, canvas.width, canvas.height);
+    menuButtons.style.display = "none";
+    backButton.style.display = "block";
+  })
 
   const music = document.getElementById("music");
   const musicIcon = document.getElementById("music-icon");
