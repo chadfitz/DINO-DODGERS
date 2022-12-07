@@ -1,0 +1,28 @@
+.canvas-container{
+  padding: 0;
+  margin: auto;
+  position: relative;
+  width: 67%;
+  height: 67%
+}
+
+#game-canvas{
+  border-radius: 20px;
+}
+
+.title{
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
+  font-size: 110px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: forestgreen;
+  text-shadow: 5px 5px 5px slategray;
+  margin: 0;
+  // padding: 0;
+}
+
+body{
+  display: block;
+  text-align: center
+}

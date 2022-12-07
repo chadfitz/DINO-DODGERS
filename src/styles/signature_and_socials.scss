@@ -1,0 +1,29 @@
+.signature{
+  margin-top: 5px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, sans-serif;
+  font-size: 25px;
+  color:rgb(223, 222, 233);
+}
+
+.links{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  // bottom: 15px;
+  display: flex
+}
+
+.links img{
+  margin-right: 10px;
+}
+
+#linkedin-icon:hover{
+  transform: scale(1.25);
+  transition: .2s;
+}
+
+#github-icon:hover{
+  transform: scale(1.25);
+  transition: .2s;
+}

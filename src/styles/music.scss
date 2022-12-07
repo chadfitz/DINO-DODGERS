@@ -1,0 +1,31 @@
+.music-icons{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#music-nav-icons{
+  display: flex;
+  padding-top: 2px;
+  gap: 4px;
+}
+
+#music-icon:hover{
+  transform: scale(1.25);
+  cursor: pointer;
+  transition: .2s;
+}
+
+#next:hover{
+  transform: scale(1.25);
+  cursor: pointer;
+  transition: .2s;
+}
+
+#prev:hover{
+  transform: scale(1.25);
+  cursor: pointer;
+  transition: .2s;
+}

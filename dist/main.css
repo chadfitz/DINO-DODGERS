@@ -1,11 +1,6 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-.marie {
-  color: white;
-  font-size: 1px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -36,57 +31,16 @@
   display: none;
 }
 
+.canvas-container {
+  padding: 0;
+  margin: auto;
+  position: relative;
+  width: 67%;
+  height: 67%;
+}
+
 #game-canvas {
   border-radius: 20px;
-}
-
-.signature {
-  margin-top: 5px;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, sans-serif;
-  font-size: 25px;
-  color: rgb(223, 222, 233);
-}
-
-#music-icons {
-  transform: translate(10px, 0px);
-  align-self: baseline;
-  display: flex;
-  flex-direction: column;
-}
-
-#music-nav-icons {
-  display: flex;
-  padding-top: 2px;
-  gap: 4px;
-}
-
-#music-icon:hover {
-  transform: scale(1.25);
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-#next:hover {
-  transform: scale(1.25);
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-#prev:hover {
-  transform: scale(1.25);
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-#linkedin-icon:hover {
-  transform: scale(1.25);
-  transition: 0.2s;
-}
-
-#github-icon:hover {
-  transform: scale(1.25);
-  transition: 0.2s;
 }
 
 .title {
@@ -100,21 +54,9 @@
   margin: 0;
 }
 
-h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 body {
   display: block;
   text-align: center;
-}
-
-.canvas-container {
-  padding: 0;
-  margin: auto;
-  position: relative;
-  width: 67%;
-  height: 67%;
 }
 
 .menu-buttons {
@@ -156,37 +98,6 @@ body {
   text-decoration: none;
 }
 
-#back-button {
-  display: none;
-  margin: 0px auto;
-  position: absolute;
-  right: 50%;
-  bottom: 9%;
-  transform: translate(50%, 0);
-  width: 200px;
-  padding: 20px;
-  color: white;
-  font-family: "Trebuchet MS", Arial, Verdana;
-  text-shadow: 1px 1px #494949;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  font-weight: 700;
-  text-align: center;
-  transition: all 0.3s ease-in-out 0s;
-  background-size: 200% auto;
-  border-radius: 10px;
-  border: 0px;
-  background-image: linear-gradient(45deg, #1b9c2c 0%, #76e967 51%, #1b9c2c 100%);
-  cursor: pointer;
-  touch-action: manipulation;
-}
-
-#back-button:hover {
-  transform: translate(50%, -6px);
-  background-position: right center;
-  text-decoration: none;
-}
-
 .difficulty-buttons {
   position: absolute;
   right: 21%;
@@ -221,6 +132,45 @@ body {
   transform: translateY(-6px);
 }
 
+#back-button {
+  display: none;
+  margin: 0px auto;
+  position: absolute;
+  right: 50%;
+  bottom: 9%;
+  transform: translate(50%, 0);
+  width: 200px;
+  padding: 20px;
+  color: white;
+  font-family: "Trebuchet MS", Arial, Verdana;
+  text-shadow: 1px 1px #494949;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.3s ease-in-out 0s;
+  background-size: 200% auto;
+  border-radius: 10px;
+  border: 0px;
+  background-image: linear-gradient(45deg, #1b9c2c 0%, #76e967 51%, #1b9c2c 100%);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+#back-button:hover {
+  transform: translate(50%, -6px);
+  background-position: right center;
+  text-decoration: none;
+}
+
+.signature {
+  margin-top: 5px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, sans-serif;
+  font-size: 25px;
+  color: rgb(223, 222, 233);
+}
+
 .links {
   position: absolute;
   left: 50%;
@@ -232,6 +182,16 @@ body {
   margin-right: 10px;
 }
 
+#linkedin-icon:hover {
+  transform: scale(1.25);
+  transition: 0.2s;
+}
+
+#github-icon:hover {
+  transform: scale(1.25);
+  transition: 0.2s;
+}
+
 .music-icons {
   display: flex;
   flex-direction: column;
@@ -240,45 +200,26 @@ body {
   right: 5px;
 }
 
-.game-settings-buttons img {
-  margin-bottom: 10px;
-  width: 45px;
-  height: 45px;
-}
-
-.game-settings-buttons img:hover {
-  cursor: pointer;
-}
-
-.play-again-buttons {
-  position: absolute;
-  left: 300px;
-  top: 400px;
+#music-nav-icons {
   display: flex;
-  list-style: none;
+  padding-top: 2px;
+  gap: 4px;
 }
 
-.play-again-buttons li {
+#music-icon:hover {
+  transform: scale(1.25);
   cursor: pointer;
-  margin: 0px auto;
-  margin-right: 25px;
-  width: 240px;
-  padding: 20px;
-  color: #313133;
-  font-family: "Trebuchet MS", Arial, Verdana;
-  border-radius: 16px;
-  text-shadow: 1px 1px #494949;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  background: linear-gradient(90deg, #fd8e7f 0%, #c26d6a 100%);
-  border: none;
-  border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(136, 58, 39, 0.25);
-  transition: all 0.3s ease-in-out 0s;
-  z-index: 1001;
+  transition: 0.2s;
 }
 
-.play-again-buttons li:hover {
-  color: #e6e6e6;
-  transform: translateY(-6px);
+#next:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#prev:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+  transition: 0.2s;
 }
