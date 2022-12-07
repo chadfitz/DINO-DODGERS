@@ -35,12 +35,12 @@ class ClickHandler{
   // this.music.load();
 
   this.playButton.addEventListener("click", () => {
-    const game = new Game(this.canvas, this.ctx);
+    new Game(this.canvas, this.ctx);
     this.menuButtons.style.display = "none";
   })
 
   this.instructionsButton.addEventListener("click", () => {
-    this.ctx.drawImage(instructions, 0, 0, this.canvas.width, this.canvas.height);
+    this.ctx.drawImage(this.instructions, 0, 0, this.canvas.width, this.canvas.height);
     this.menuButtons.style.display = "none";
     this.backButton.style.display = "block";
   })
@@ -64,7 +64,7 @@ class ClickHandler{
   })
 
   this.playAgainButton.addEventListener("click", () => {
-    const game = new Game(this.canvas, this.ctx);
+    new Game(this.canvas, this.ctx);
     this.menuButtons.style.display = "none";
     this.endScreenButtons.style.display = "none";
   })

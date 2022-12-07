@@ -99,10 +99,6 @@ class Game {
     this.ctx.strokeStyle = "forestgreen";
     this.ctx.lineWidth = 5;
     this.ctx.strokeText(this.score, loc.x, loc.y);
-    // this.ctx.shadowColor = "slategray";
-    // this.ctx.shadowOffsetX = 1;
-    // this.ctx.shadowOffsetY = 1;
-    // this.ctx.shadowBlur = 1;
   }
 }
 

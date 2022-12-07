@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => {
     canvas.width = window.innerWidth * 0.67;
     canvas.height = window.innerHeight * 0.67;
-    this.ctx.drawImage(startScreen.background, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(startScreen.background, 0, 0, canvas.width, canvas.height);
   })
 
   document.body.style.backgroundImage = "url('./src/backgrounds/space.jpg')";
