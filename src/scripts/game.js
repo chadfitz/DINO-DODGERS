@@ -57,7 +57,7 @@ class Game {
 
     this.leftHazardCounter = setInterval(() => {
       this.leftHazards.push(new LeftHazard(this.ctx, this.canvas));
-      }, 7000);
+      }, 4500);
   }
 
   addRightHazard(){
@@ -65,7 +65,7 @@ class Game {
 
     this.rightHazardCounter = setInterval(() => {
       this.rightHazards.push(new RightHazard(this.ctx, this.canvas));
-      }, 7000);
+      }, 4500);
   }
 
   gameOver(){

@@ -29,10 +29,9 @@ class ClickHandler{
     "./src/music/ES_Astrophage - Lupus Nocte.mp3"
     ];
   this.currentSong = 0;
+  this.music.play();
   
   this.startScreen.renderStartScreen();
-  this.music.autoplay = true;
-  this.music.load();
 
   this.playButton.addEventListener("click", () => {
     new Game(this.canvas, this.ctx);
