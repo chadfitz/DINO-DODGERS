@@ -83,7 +83,7 @@ class Game {
         if(
           hazard.x < this.characterTwo.x + this.characterTwo.width - 5 &&
           hazard.x + hazard.width > this.characterTwo.x + 10 &&
-          hazard.y < this.characterTwo.y + this.characterTwo.height &&
+          hazard.y + 115 < this.characterTwo.y + this.characterTwo.height &&
           hazard.y + hazard.height > this.characterTwo.y + 5
         ) gameOver = true;
     })
