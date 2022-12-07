@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuButtons = document.querySelector(".menu-buttons");
   const playButton = document.getElementById("play-button");
   const instructionsButton = document.getElementById("instructions-button");
-
+  // const difficultyButton = document.getElementById("difficulty-button");
   const backButton = document.getElementById("back-button");
 
   playButton.addEventListener("click", () => {
@@ -43,6 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
     backButton.style.display = "none";
     menuButtons.style.display = "block";
   })
+
+  // difficultyButton.addEventListener("click", () => {
+  //   const difficultySelect = document.getElementById("difficulty-select");
+  //   ctx.drawImage(difficultySelect, 0, 0, canvas.width, canvas.height);
+  //   menuButtons.style.display = "none";
+  //   backButton.style.display = "block";
+  // })
 
   // canvas.addEventListener("click", () => {
   //   const game = new Game(canvas, ctx);
