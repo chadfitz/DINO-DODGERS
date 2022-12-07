@@ -18,8 +18,21 @@ class ClickHandler{
   this.endScreenButtons = document.querySelector(".end-screen-buttons");
   this.playAgainButton = document.getElementById("play-again-button");
   this.backToMenuButton = document.getElementById("back-to-menu-button");
+  this.music = document.getElementById("music");
+  this.musicIcon = document.getElementById("music-icon");
+  this.nextSongIcon = document.getElementById("next");
+  this.prevSongIcon = document.getElementById("prev");
+  this.musicSources = [
+    "./src/music/ES_Tiger Tracks - Lexica.mp3",
+    "./src/music/Monkeys-Spinning-Monkeys.mp3",
+    "./src/music/makai-symphony-dragon-slayer.mp3",
+    "./src/music/ES_Astrophage - Lupus Nocte.mp3"
+    ];
+  this.currentSong = 0;
   
   this.startScreen.renderStartScreen();
+  // this.music.autoplay = true;
+  // this.music.load();
 
   this.playButton.addEventListener("click", () => {
     const game = new Game(this.canvas, this.ctx);
@@ -61,6 +74,34 @@ class ClickHandler{
     this.backButton.style.display = "none";
     this.menuButtons.style.display = "block";
     this.endScreenButtons.style.display = "none";
+  })
+
+  this.musicIcon.addEventListener("click", () => {
+    if (this.music.paused){
+      this.music.play();
+      this.musicIcon.src = "./src/icons/music.png";
+    } else {
+      this.music.pause();
+      this.musicIcon.src = "./src/icons/music_off.png";
+    }
+  })
+
+  this.nextSongIcon.addEventListener("click", () => {
+    this.currentSong++;
+    this.music.src = this.musicSources[this.currentSong % this.musicSources.length];
+    this.music.play();
+    this.musicIcon.src = "./src/icons/music.png";
+  })
+
+  this.prevSongIcon.addEventListener("click", () => {
+    if(this.currentSong > 0){
+      this.currentSong--;
+    } else {
+      this.currentSong = this.musicSources.length - 1;
+    }
+    this.music.src = this.musicSources[this.currentSong % this.musicSources.length];
+    this.music.play();
+    this.musicIcon.src = "./src/icons/music.png";
   })
   }
 }
