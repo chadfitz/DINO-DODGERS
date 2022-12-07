@@ -4,6 +4,8 @@ class EndScreen {
     this.canvas = canvas;
     this.score = score;
     this.endScreenButtons = document.querySelector(".end-screen-buttons");
+    this.gameOverSound = new Audio();
+    this.gameOverSound.src = "./src/music/mixkit-retro-arcade-game-over-470.wav";
     this.renderEndScreen();
   }
 
@@ -11,6 +13,7 @@ class EndScreen {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.ctx.drawImage(background, 0, 0, this.canvas.width, this.canvas.height);
     this.endScreenButtons.style.display = "block";
+    this.gameOverSound.play();
 
     const scoreLoc = { x:this.canvas.width/2, y:this.canvas.height/2 }
     this.ctx.textAlign = "center";
