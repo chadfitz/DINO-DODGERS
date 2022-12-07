@@ -1,5 +1,6 @@
 import Game from './scripts/game.js';
 import StartScreen from './scripts/startScreen.js';
+import ClickHandler from './scripts/clickHandler.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("game-canvas");
@@ -12,62 +13,65 @@ document.addEventListener("DOMContentLoaded", () => {
   background.width = canvas.width;
   background.height = canvas.height;
   
-  const startScreen = new StartScreen(canvas, ctx);
-  startScreen.renderStartScreen();
+  // const startScreen = new StartScreen(canvas, ctx);
+  // startScreen.renderStartScreen();
 
-  const menuButtons = document.querySelector(".menu-buttons");
-  const playButton = document.getElementById("play-button");
-  const instructionsButton = document.getElementById("instructions-button");
-  const difficultyButton = document.getElementById("difficulty-button");
-  const sourcesButton = document.getElementById("sources-button");
-  const backButton = document.getElementById("back-button");
-  const endScreenButtons = document.querySelector(".end-screen-buttons");
-  const playAgainButton = document.getElementById("play-again-button");
-  const backToMenuButton = document.getElementById("back-to-menu-button");
+  const clickHandler = new ClickHandler(canvas, ctx);
+
+  // const menuButtons = document.querySelector(".menu-buttons");
+  // const playButton = document.getElementById("play-button");
+  // const instructionsButton = document.getElementById("instructions-button");
+  // const difficultyButton = document.getElementById("difficulty-button");
+  // const sourcesButton = document.getElementById("sources-button");
+  // const backButton = document.getElementById("back-button");
+  // const endScreenButtons = document.querySelector(".end-screen-buttons");
+  // const playAgainButton = document.getElementById("play-again-button");
+  // const backToMenuButton = document.getElementById("back-to-menu-button");
   
-  playButton.addEventListener("click", () => {
-    const game = new Game(canvas, ctx);
-    menuButtons.style.display = "none";
-  })
+  // playButton.addEventListener("click", () => {
+  //   const game = new Game(canvas, ctx);
+  //   menuButtons.style.display = "none";
+  // })
 
-  instructionsButton.addEventListener("click", () => {
-    const instructions = document.getElementById("instructions");
-    ctx.drawImage(instructions, 0, 0, canvas.width, canvas.height);
-    menuButtons.style.display = "none";
-    backButton.style.display = "block";  })
+  // instructionsButton.addEventListener("click", () => {
+  //   const instructions = document.getElementById("instructions");
+  //   ctx.drawImage(instructions, 0, 0, canvas.width, canvas.height);
+  //   menuButtons.style.display = "none";
+  //   backButton.style.display = "block";
+  // })
 
-  backButton.addEventListener("click", () => {
-    ctx.drawImage(startScreen.background, 0, 0, canvas.width, canvas.height);
-    backButton.style.display = "none";
-    menuButtons.style.display = "block";
-  })
+  // backButton.addEventListener("click", () => {
+  //   ctx.drawImage(startScreen.background, 0, 0, canvas.width, canvas.height);
+  //   backButton.style.display = "none";
+  //   menuButtons.style.display = "block";
+  // })
 
-  difficultyButton.addEventListener("click", () => {
-    const difficultySelect = document.getElementById("difficulty-select");
-    ctx.drawImage(difficultySelect, 0, 0, canvas.width, canvas.height);
-    menuButtons.style.display = "none";
-    backButton.style.display = "block";
-  })
+  // difficultyButton.addEventListener("click", () => {
+  //   const difficultySelect = document.getElementById("difficulty-select");
+  //   ctx.drawImage(difficultySelect, 0, 0, canvas.width, canvas.height);
+  //   menuButtons.style.display = "none";
+  //   backButton.style.display = "block";
+  // })
 
-  sourcesButton.addEventListener("click", () => {
-    const sources = document.getElementById("sources");
-    ctx.drawImage(sources, 0, 0, canvas.width, canvas.height);
-    menuButtons.style.display = "none";
-    backButton.style.display = "block";
-  })
+  // sourcesButton.addEventListener("click", () => {
+  //   const sources = document.getElementById("sources");
+  //   ctx.drawImage(sources, 0, 0, canvas.width, canvas.height);
+  //   menuButtons.style.display = "none";
+  //   backButton.style.display = "block";
+  // })
 
-  playAgainButton.addEventListener("click", () => {
-    const game = new Game(canvas, ctx);
-    menuButtons.style.display = "none";
-    endScreenButtons.style.display = "none";
-  })
+  // playAgainButton.addEventListener("click", () => {
+  //   const game = new Game(canvas, ctx);
+  //   menuButtons.style.display = "none";
+  //   endScreenButtons.style.display = "none";
+  // })
 
-  backToMenuButton.addEventListener("click", () => {
-    ctx.drawImage(startScreen.background, 0, 0, canvas.width, canvas.height);
-    backButton.style.display = "none";
-    menuButtons.style.display = "block";
-    endScreenButtons.style.display = "none";
-  })
+  // backToMenuButton.addEventListener("click", () => {
+  //   ctx.drawImage(startScreen.background, 0, 0, canvas.width, canvas.height);
+  //   backButton.style.display = "none";
+  //   menuButtons.style.display = "block";
+  //   endScreenButtons.style.display = "none";
+  // })
 
   const music = document.getElementById("music");
   const musicIcon = document.getElementById("music-icon");
