@@ -31,8 +31,8 @@ class ClickHandler{
   this.currentSong = 0;
   
   this.startScreen.renderStartScreen();
-  // this.music.autoplay = true;
-  // this.music.load();
+  this.music.autoplay = true;
+  this.music.load();
 
   this.playButton.addEventListener("click", () => {
     new Game(this.canvas, this.ctx);

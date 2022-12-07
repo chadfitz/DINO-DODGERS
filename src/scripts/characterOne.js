@@ -47,7 +47,6 @@ class CharacterOne{
       if (this.frameX < this.maxFrame) this.frameX++;
       else this.frameX = 0;
     }
-    // this.ctx.strokeRect(this.x, this.y + 7, this.width - 45, this.height - 7);
     this.gameFrame++;
   }
 

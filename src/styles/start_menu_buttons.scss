@@ -11,17 +11,13 @@
 .menu-buttons li{
   margin: 0px auto;
   display: block;
-  // height: 100px;
   width:200px;
   padding:20px;
   margin: 10px;
   color: white;
   color: black;
-  // font-family:"Trebuchet MS",Arial,Verdana;
   font-family: monospace;
   font-size: large;
-  // -webkit-text-stroke-width: 0.25px;
-  // -webkit-text-stroke-color: forestgreen;
   text-shadow:0.5px 0.5px #494949;
   text-transform:uppercase;
   letter-spacing:1px;
@@ -29,7 +25,6 @@
   text-align: center;
   text-transform: uppercase;
   transition: all .3s ease-in-out 0s;
-  // z-index:1001;
   background-size: 200% auto;
   border-radius: 10px;
   border: 0px;
@@ -71,7 +66,6 @@
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(136,58,39,.25);
   transition: all .3s ease-in-out 0s;
-  // z-index: 1001
 }
 
 .difficulty-buttons li:hover{
@@ -86,7 +80,6 @@
   right: 50%;
   bottom: 9%;
   transform: translate(50%, 0);
-  // height: 100px;
   width: 200px;
   padding: 20px;
   color: white;
@@ -97,7 +90,6 @@
   font-weight: 700;
   text-align: center;
   transition: all .3s ease-in-out 0s;
-  // z-index: 1001;
   background-size: 200% auto;
   border-radius: 10px;
   border: 0px;

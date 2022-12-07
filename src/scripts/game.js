@@ -1,4 +1,3 @@
-// import StartScreen from "./startScreen";
 import Level from "./level";
 import CharacterOne from "./characterOne";
 import CharacterTwo from "./characterTwo";
