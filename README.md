@@ -12,11 +12,9 @@ DINO DODGERS is a simple yet engaging game for entertainment purposes. Players c
 - CSS
 - Webpack/Babel
 
-## Gameplay Screenshots
+## Gameplay Gif
 
-![](./src/readme_screenshots/instructions.PNG)  
-  
-![](./src/readme_screenshots/gameplay.PNG)  
+![](./src/readme_screenshots/gameplay_gif.gif  
 
 ## The Code
 
