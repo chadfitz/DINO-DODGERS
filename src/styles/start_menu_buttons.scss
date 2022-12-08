@@ -14,7 +14,6 @@
   width:200px;
   padding:20px;
   margin: 10px;
-  color: white;
   color: black;
   font-family: monospace;
   font-size: large;
@@ -23,7 +22,6 @@
   letter-spacing:1px;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
   transition: all .3s ease-in-out 0s;
   background-size: 200% auto;
   border-radius: 10px;
@@ -82,11 +80,11 @@
   transform: translate(50%, 0);
   width: 200px;
   padding: 20px;
-  color: white;
-  font-family:"Trebuchet MS",Arial,Verdana;
-  text-shadow: 1px 1px #494949;
+  color: black;
+  font-family: monospace;
+  text-shadow: 0.5px 0.5px #494949;
   text-transform: uppercase;
-  letter-spacing: 1.3px;
+  letter-spacing: 1px;
   font-weight: 700;
   text-align: center;
   transition: all .3s ease-in-out 0s;

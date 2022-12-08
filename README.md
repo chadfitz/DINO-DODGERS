@@ -24,3 +24,7 @@ Gameplay is organized into various classes based on function, and each class is 
 - HTML5 Canvas
 - CSS
 - Webpack/Babel
+
+## Future Features
+
+In the future, the difficulty button will dislay choices for easy, medium, or hard, which will affect the spawn rate and fall speed of meteors.
