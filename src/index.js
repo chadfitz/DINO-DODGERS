@@ -1,4 +1,3 @@
-import Game from './scripts/game.js';
 import StartScreen from './scripts/startScreen.js';
 import ClickHandler from './scripts/clickHandler.js';
 
