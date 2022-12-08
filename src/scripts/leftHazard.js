@@ -4,7 +4,11 @@ class LeftHazard {
     this.canvas = canvas;
     this.x = 0;
     this.y = -this.height;
-    this.hazardPics = ["./src/sprites/meteor1.png", "./src/sprites/meteor2.png", "./src/sprites/meteor3.png"];
+    this.hazardPics = [
+      "./src/sprites/meteor1.png", 
+      "./src/sprites/meteor2.png", 
+      "./src/sprites/meteor3.png"
+    ];
     this.hazard = new Image();
     this.hazard.src = this.hazardPics[Math.floor(Math.random() * this.hazardPics.length)];
     this.width = 50;

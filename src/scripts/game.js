@@ -21,11 +21,6 @@ class Game {
     this.addRightHazard();
     this.gameOver();
     this.scoreCounter();
-    this.setup();
-  }
-  
-  setup() {
-    this.score = 0;
     this.play();
   }
   
