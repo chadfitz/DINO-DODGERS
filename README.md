@@ -4,7 +4,7 @@
 
 ## Overview
 
-DINO DODGERS is a simple game for entertainment purposes. Players control two dinosaurs at the same time by moving left and right to dodge falling meteors. The objective is to last for as long as possible, and hitting a meteor with either dinosaur results in game over.  
+DINO DODGERS is a simple yet engaging game for entertainment purposes. Players control two dinosaurs at the same time by moving left and right to dodge falling meteors. The objective is to last for as long as possible, and hitting a meteor with either dinosaur results in game over.  
 
 ## Gameplay Screenshots
 
