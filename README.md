@@ -14,7 +14,7 @@ DINO DODGERS is a simple yet engaging game for entertainment purposes. Players c
 
 ## Gameplay Gif
 
-![](./src/readme_screenshots/gameplay_gif.gif  
+![](./src/readme_screenshots/gameplay_gif.gif)  
 
 ## The Code
 
