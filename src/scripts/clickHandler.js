@@ -39,6 +39,11 @@ class ClickHandler{
 
   this.instructionsButton.addEventListener("click", () => {
     this.ctx.drawImage(this.instructions, 0, 0, this.canvas.width, this.canvas.height);
+    this.canvas.addEventListener("click", ()=>{
+      this.ctx.drawImage(this.startScreen.background, 0, 0, this.canvas.width, this.canvas.height);
+      this.backButton.style.display = "none";
+      this.menuButtons.style.display = "block";
+    })
     this.menuButtons.style.display = "none";
     this.backButton.style.display = "block";
   })
@@ -51,12 +56,22 @@ class ClickHandler{
 
   this.difficultyButton.addEventListener("click", () => {
     this.ctx.drawImage(this.difficultySelect, 0, 0, this.canvas.width, this.canvas.height);
+    this.canvas.addEventListener("click", ()=>{
+      this.ctx.drawImage(this.startScreen.background, 0, 0, this.canvas.width, this.canvas.height);
+      this.backButton.style.display = "none";
+      this.menuButtons.style.display = "block";
+    })
     this.menuButtons.style.display = "none";
     this.backButton.style.display = "block";
   })
 
   this.sourcesButton.addEventListener("click", () => {
     this.ctx.drawImage(this.sources, 0, 0, this.canvas.width, this.canvas.height);
+    this.canvas.addEventListener("click", ()=>{
+      this.ctx.drawImage(this.startScreen.background, 0, 0, this.canvas.width, this.canvas.height);
+      this.backButton.style.display = "none";
+      this.menuButtons.style.display = "block";
+    })
     this.menuButtons.style.display = "none";
     this.backButton.style.display = "block";
   })
