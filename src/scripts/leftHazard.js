@@ -15,7 +15,6 @@ class LeftHazard {
     this.hazard.src = this.hazardPics[Math.floor(Math.random() * this.hazardPics.length)];
     this.width = 50;
     this.height = 157;
-    // this.vel = (Math.random() * 2) + 2;
   }
 
   drawHazard(){
@@ -26,11 +25,9 @@ class LeftHazard {
     this.drawHazard();
     if (this.y === -this.height) this.x = (Math.random() * this.canvas.width/2);
     if (this.y < this.canvas.height){
-      // this.y += this.vel;
       this.y += LeftHazard.vel;
     } else {
       this.y = -this.height;
-      // this.vel = (Math.random() * 2) + 2;
       this.vel = LeftHazard.vel;
     }
   }

@@ -7,9 +7,6 @@ class ClickHandler{
   constructor(canvas, ctx){
   this.canvas = canvas;
   this.ctx = ctx;
-    // this.rightHazard = new RightHazard(this.ctx, this.canvas);
-    // this.rightHazard.vel = 10;
-    // console.log(RightHazard.vel);
   this.startScreen = new StartScreen(this.canvas, this.ctx);
   this.menuButtons = document.querySelector(".menu-buttons");
   this.playButton = document.getElementById("play-button");
@@ -21,7 +18,6 @@ class ClickHandler{
   this.mediumButton = document.getElementById("medium-button");
   this.hardButton = document.getElementById("hard-button");
   this.haha = document.getElementById("HAHA");
-  // this.difficultySelect = document.getElementById("difficulty-select");
   this.sourcesButton = document.getElementById("sources-button");
   this.sources = document.getElementById("sources");
   this.backButton = document.getElementById("back-button");
@@ -67,9 +63,6 @@ class ClickHandler{
   })
 
   this.difficultyButton.addEventListener("click", () => {
-    // this.ctx.drawImage(this.difficultySelect, 0, 0, this.canvas.width, this.canvas.height);
-    // canvas.addEventListener("click", canvasClick, { once: true });
-    // this.backButton.style.display = "block";
     this.menuButtons.style.display = "none";
     this.difficultyButtons.style.display = "flex";
   })
@@ -77,7 +70,6 @@ class ClickHandler{
   this.easyButton.addEventListener("click", () => {
     RightHazard.vel = (Math.random() * 2) + 2;
     LeftHazard.vel = (Math.random() * 2) + 2;
-    console.log("easy")
     this.difficultyButtons.style.display = "none";
     this.menuButtons.style.display = "flex";
   })
@@ -85,7 +77,6 @@ class ClickHandler{
   this.mediumButton.addEventListener("click", () => {
     RightHazard.vel = (Math.random() * 3.5) + 3.5;
     LeftHazard.vel = (Math.random() * 3.5) + 3.5;
-    console.log("medium")
     this.difficultyButtons.style.display = "none";
     this.menuButtons.style.display = "flex";
   })
@@ -93,7 +84,6 @@ class ClickHandler{
   this.hardButton.addEventListener("click", () => {
     RightHazard.vel = (Math.random() * 6) + 4;
     LeftHazard.vel = (Math.random() * 6) + 4;
-    console.log("hard");
     this.difficultyButtons.style.display = "none";
     this.menuButtons.style.display = "flex";
   })

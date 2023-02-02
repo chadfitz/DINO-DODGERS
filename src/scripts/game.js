@@ -5,7 +5,6 @@ import LeftHazard from "./leftHazard";
 import RightHazard from "./rightHazard";
 import EndScreen from "./endScreen";
 import InputHandler from "./inputHandler";
-// import ClickHandler from "./clickHandler";after
 
 class Game {
   constructor(canvas, ctx){
@@ -53,7 +52,6 @@ class Game {
     this.leftHazards.push(new LeftHazard(this.ctx, this.canvas));
     
     this.leftHazardCounter = setInterval(() => {
-      console.log("fart");
       this.leftHazards.push(new LeftHazard(this.ctx, this.canvas));
     }, 4500);
   }
@@ -63,7 +61,6 @@ class Game {
     this.rightHazards.push(newRH);
     
     this.rightHazardCounter = setInterval(() => {
-      console.log("fart");
       this.rightHazards.push(new RightHazard(this.ctx, this.canvas));
     }, 4500);
   }
