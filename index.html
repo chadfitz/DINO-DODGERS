@@ -4,64 +4,72 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/DINO-DODGERS/dist/main.css">
+  <!-- Production CSS: -->
+  <!-- <link rel="stylesheet" href="/DINO-DODGERS/dist/main.css"> -->
+  <!-- Development CSS: -->
+  <link rel="stylesheet" href="/dist/main.css">
   <link rel="shortcut icon" href="#">
   <script src="./dist/main.js"></script>
   <title>DINO DODGERS</title>
   <link rel="icon" href="/DINO-DODGERS/src/icons/favicon.png">
 </head>
 <body>
-  <h1 class="title">DINO DODGERS</h1>
+  <div class="window">
 
-  <div class="canvas-container">
-    <canvas id="game-canvas" width="67%" height="67%"></canvas>
-
-    <nav id="button-nav">
-      <ul class="menu-buttons">
-        <li id="play-button">Play</li>
-        <li id="instructions-button">Instructions</li>
-        <li id="difficulty-button">Difficulty</li>
-        <li id="sources-button">Sources</li>
+    <h1 class="title">DINO DODGERS</h1>
+  
+    <div class="canvas-container">
+      <canvas id="game-canvas" width="67%" height="67%"></canvas>
+  
+      <nav id="button-nav">
+        <ul class="menu-buttons">
+          <li id="play-button">Play</li>
+          <li id="instructions-button">Instructions</li>
+          <li id="difficulty-button">Difficulty</li>
+          <li id="sources-button">Sources</li>
+        </ul>
+      </nav>
+  
+      <img id="instructions" src="./src/backgrounds/instructions.png">
+      <img id="difficulty-select" src="./src/backgrounds/difficulty_select.png">
+      <img id="sources" src="./src/backgrounds/sources.png">
+  
+      <div id="back-button">Back</div>
+  
+      <!-- <nav id="difficulty-nav">
+        <ul class="difficulty-buttons">
+          <li id="easy-button">Easy</li>
+          <li id="medium-button">Medium</li>
+          <li id="hard-button">Hard</li>
+        </ul>
+      </nav> -->
+  
+      <ul class="end-screen-buttons">
+        <li id="play-again-button">Play Again?</li>
+        <li id="back-to-menu-button">Back to Menu</li>
       </ul>
-    </nav>
-
-    <img id="instructions" src="./src/backgrounds/instructions.png">
-    <img id="difficulty-select" src="./src/backgrounds/difficulty_select.png">
-    <img id="sources" src="./src/backgrounds/sources.png">
-
-    <div id="back-button">Back</div>
-
-    <!-- <nav id="difficulty-nav">
-      <ul class="difficulty-buttons">
-        <li id="easy-button">Easy</li>
-        <li id="medium-button">Medium</li>
-        <li id="hard-button">Hard</li>
-      </ul>
-    </nav> -->
-
-    <ul class="end-screen-buttons">
-      <li id="play-again-button">Play Again?</li>
-      <li id="back-to-menu-button">Back to Menu</li>
-    </ul>
-
-    <div class="music-icons">
-        <img id="music-icon" src="./src/icons/music_off.png" style="width:60px;height:60px;">
-        <audio id="music" loop> 
-          <source src="./src/music/ES_Tiger Tracks - Lexica.mp3">
-        </audio>
-        <div id="music-nav-icons">
-          <img id="prev" src="./src/icons/prev.png" style="width:28px;height:28px;">
-          <img id="next" src="./src/icons/next.png" style="width:28px;height:28px;">
+  
+      <div class="music-icons">
+          <img id="music-icon" src="./src/icons/music_off.png" style="width:60px;height:60px;">
+          <audio id="music" loop> 
+            <source src="./src/music/ES_Tiger Tracks - Lexica.mp3">
+          </audio>
+          <div id="music-nav-icons">
+            <img id="prev" src="./src/icons/prev.png" style="width:28px;height:28px;">
+            <img id="next" src="./src/icons/next.png" style="width:28px;height:28px;">
+          </div>
         </div>
+  
       </div>
-
-    <p class="signature">Created by Chad Fitzgerald</p>
+      
+    <div class="links">
+      <p class="signature">Created by Chad Fitzgerald</p>
+      <div>
+        <a href="https://www.linkedin.com/in/chad-fitzgerald-956981ab/"><img id="linkedin-icon" src="./src/icons/linkedin.png" style="width:50px;height:50px;"></a>
+        <a href="https://github.com/chadfitz"><img id="github-icon" src="./src/icons/github-mark-white.png" style="width:50px;height:50px;"></a>
+      </div>
+    </div>    
   </div>
-
-  <div class="links">
-    <a href="https://www.linkedin.com/in/chad-fitzgerald-956981ab/"><img id="linkedin-icon" src="./src/icons/linkedin.png" style="width:50px;height:50px;"></a>
-    <a href="https://github.com/chadfitz"><img id="github-icon" src="./src/icons/github-mark-white.png" style="width:50px;height:50px;"></a>
-  </div>    
 
   <img id="background" src="./src/backgrounds/space_red.jpg">
   <img id="base-dino" src="./src/sprites/base_dino_spritesheet.png">
