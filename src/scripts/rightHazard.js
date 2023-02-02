@@ -1,4 +1,6 @@
 class RightHazard {
+  static vel = (Math.random() * 2) + 2;
+
   constructor(ctx, canvas){
     this.ctx = ctx;
     this.canvas = canvas;
@@ -13,7 +15,8 @@ class RightHazard {
     this.hazard.src = this.hazardPics[Math.floor(Math.random() * this.hazardPics.length)];
     this.width = 50;
     this.height = 157;
-    this.vel = (Math.random() * 2) + 2;
+    // this.vel = (Math.random() * 2) + 2;
+    // this.vel = RightHazard.vel;
   }
 
   drawHazard(){
@@ -24,10 +27,12 @@ class RightHazard {
     this.drawHazard();
     if (this.y === -this.height) this.x = (Math.random() * this.canvas.width/2) + this.canvas.width/2;
     if (this.y < this.canvas.height) {
-      this.y += this.vel;
+      // this.y += this.vel;
+      this.y += RightHazard.vel;
     } else {
       this.y = -this.height;
-      this.vel = (Math.random() * 2) + 2;
+      // this.vel = (Math.random() * 2) + 2;
+      this.vel = RightHazard.vel;
     }
   }
 }

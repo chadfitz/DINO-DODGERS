@@ -1,17 +1,27 @@
 import Game from './game'
 import StartScreen from './startScreen';
+import RightHazard from './rightHazard';
+import LeftHazard from './leftHazard';
 
 class ClickHandler{
   constructor(canvas, ctx){
   this.canvas = canvas;
   this.ctx = ctx;
+    // this.rightHazard = new RightHazard(this.ctx, this.canvas);
+    // this.rightHazard.vel = 10;
+    // console.log(RightHazard.vel);
   this.startScreen = new StartScreen(this.canvas, this.ctx);
   this.menuButtons = document.querySelector(".menu-buttons");
   this.playButton = document.getElementById("play-button");
   this.instructionsButton = document.getElementById("instructions-button");
   this.instructions = document.getElementById("instructions");
   this.difficultyButton = document.getElementById("difficulty-button");
-  this.difficultySelect = document.getElementById("difficulty-select");
+  this.difficultyButtons = document.querySelector(".difficulty-buttons");
+  this.easyButton = document.getElementById("easy-button");
+  this.mediumButton = document.getElementById("medium-button");
+  this.hardButton = document.getElementById("hard-button");
+  this.haha = document.getElementById("HAHA");
+  // this.difficultySelect = document.getElementById("difficulty-select");
   this.sourcesButton = document.getElementById("sources-button");
   this.sources = document.getElementById("sources");
   this.backButton = document.getElementById("back-button");
@@ -40,7 +50,7 @@ class ClickHandler{
   const canvasClick = (e)=>{
     this.ctx.drawImage(this.startScreen.background, 0, 0, this.canvas.width, this.canvas.height);
     this.backButton.style.display = "none";
-    this.menuButtons.style.display = "block";
+    this.menuButtons.style.display = "flex";
   }
 
   this.instructionsButton.addEventListener("click", () => {
@@ -53,14 +63,46 @@ class ClickHandler{
   this.backButton.addEventListener("click", () => {
     this.ctx.drawImage(this.startScreen.background, 0, 0, this.canvas.width, this.canvas.height);
     this.backButton.style.display = "none";
-    this.menuButtons.style.display = "block";
+    this.menuButtons.style.display = "flex";
   })
 
   this.difficultyButton.addEventListener("click", () => {
-    this.ctx.drawImage(this.difficultySelect, 0, 0, this.canvas.width, this.canvas.height);
-    canvas.addEventListener("click", canvasClick, { once: true });
+    // this.ctx.drawImage(this.difficultySelect, 0, 0, this.canvas.width, this.canvas.height);
+    // canvas.addEventListener("click", canvasClick, { once: true });
+    // this.backButton.style.display = "block";
     this.menuButtons.style.display = "none";
-    this.backButton.style.display = "block";
+    this.difficultyButtons.style.display = "flex";
+  })
+
+  this.easyButton.addEventListener("click", () => {
+    RightHazard.vel = (Math.random() * 2) + 2;
+    LeftHazard.vel = (Math.random() * 2) + 2;
+    console.log("easy")
+    this.difficultyButtons.style.display = "none";
+    this.menuButtons.style.display = "flex";
+  })
+
+  this.mediumButton.addEventListener("click", () => {
+    RightHazard.vel = (Math.random() * 3.5) + 3.5;
+    LeftHazard.vel = (Math.random() * 3.5) + 3.5;
+    console.log("medium")
+    this.difficultyButtons.style.display = "none";
+    this.menuButtons.style.display = "flex";
+  })
+
+  this.hardButton.addEventListener("click", () => {
+    RightHazard.vel = (Math.random() * 6) + 4;
+    LeftHazard.vel = (Math.random() * 6) + 4;
+    console.log("hard");
+    this.difficultyButtons.style.display = "none";
+    this.menuButtons.style.display = "flex";
+  })
+
+  this.haha.addEventListener("click", () => {
+    RightHazard.vel = (Math.random() * 5) + 10;
+    LeftHazard.vel = (Math.random() * 5) + 10;
+    this.difficultyButtons.style.display = "none";
+    this.menuButtons.style.display = "flex";
   })
 
   this.sourcesButton.addEventListener("click", () => {
@@ -79,7 +121,7 @@ class ClickHandler{
   this.backToMenuButton.addEventListener("click", () => {
     this.ctx.drawImage(this.startScreen.background, 0, 0, this.canvas.width, this.canvas.height);
     this.backButton.style.display = "none";
-    this.menuButtons.style.display = "block";
+    this.menuButtons.style.display = "flex";
     this.endScreenButtons.style.display = "none";
   })
 

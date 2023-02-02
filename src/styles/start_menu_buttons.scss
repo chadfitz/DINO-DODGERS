@@ -39,31 +39,36 @@
 
 .difficulty-buttons{
   position: absolute;
-  right: 21%;
-  top: 49%;
+  right: 25%;
+  top: 25%;
   display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   list-style: none
 }
 
 .difficulty-buttons li{
-  cursor: pointer;
   margin: 0px auto;
-  margin-top: 12px;
-  width: 250px;
-  padding: 15px;
-  color: #313133;
-  font-family: "Trebuchet MS",Arial,Verdana;
-  border-radius: 16px;
-  text-shadow: 1px 1px #494949;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  background: linear-gradient(90deg, #d37e73 0%, #b4615e 100%);
-  border: none;
-  border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(136,58,39,.25);
+  display: block;
+  width:200px;
+  padding:20px;
+  margin: 10px;
+  color: black;
+  font-family: monospace;
+  font-size: large;
+  text-shadow:0.5px 0.5px #494949;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight: 700;
+  text-align: center;
   transition: all .3s ease-in-out 0s;
+  background-size: 200% auto;
+  border-radius: 10px;
+  border: 0px;
+  background-image: linear-gradient(45deg, #1b9c2c 0%, #76e967  51%, #1b9c2c  100%);
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .difficulty-buttons li:hover{

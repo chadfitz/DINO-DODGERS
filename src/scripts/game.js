@@ -5,6 +5,7 @@ import LeftHazard from "./leftHazard";
 import RightHazard from "./rightHazard";
 import EndScreen from "./endScreen";
 import InputHandler from "./inputHandler";
+// import ClickHandler from "./clickHandler";after
 
 class Game {
   constructor(canvas, ctx){
@@ -22,6 +23,7 @@ class Game {
     this.gameOver();
     this.scoreCounter();
     this.play();
+    this.vel = RightHazard.vel;
   }
   
   scoreCounter(){
@@ -49,18 +51,21 @@ class Game {
 
   addLeftHazard(){
     this.leftHazards.push(new LeftHazard(this.ctx, this.canvas));
-
+    
     this.leftHazardCounter = setInterval(() => {
+      console.log("fart");
       this.leftHazards.push(new LeftHazard(this.ctx, this.canvas));
-      }, 4500);
+    }, 4500);
   }
 
   addRightHazard(){
-    this.rightHazards.push(new RightHazard(this.ctx, this.canvas));
-
+    let newRH = new RightHazard(this.ctx, this.canvas);
+    this.rightHazards.push(newRH);
+    
     this.rightHazardCounter = setInterval(() => {
+      console.log("fart");
       this.rightHazards.push(new RightHazard(this.ctx, this.canvas));
-      }, 4500);
+    }, 4500);
   }
 
   gameOver(){
@@ -71,15 +76,23 @@ class Game {
         hazard.x + hazard.width > this.characterOne.x &&
         hazard.y + 115 < this.characterOne.y + this.characterOne.height - 7 &&
         hazard.y + hazard.height - 10 > this.characterOne.y + 7
-      ) gameOver = true;
+      ) {
+        gameOver = true;
+        clearInterval(this.rightHazardCounter);
+        clearInterval(this.leftHazardCounter);
+      }
     })
     this.rightHazards.forEach(hazard => {
-        if(
-          hazard.x < this.characterTwo.x + this.characterTwo.width - 5 &&
-          hazard.x + hazard.width > this.characterTwo.x + 10 &&
-          hazard.y + 115 < this.characterTwo.y + this.characterTwo.height &&
-          hazard.y + hazard.height > this.characterTwo.y + 5
-        ) gameOver = true;
+      if(
+        hazard.x < this.characterTwo.x + this.characterTwo.width - 5 &&
+        hazard.x + hazard.width > this.characterTwo.x + 10 &&
+        hazard.y + 115 < this.characterTwo.y + this.characterTwo.height &&
+        hazard.y + hazard.height > this.characterTwo.y + 5
+      ) {
+        gameOver = true;
+        clearInterval(this.rightHazardCounter);
+        clearInterval(this.leftHazardCounter);
+      }
     })
     return gameOver;
   }
