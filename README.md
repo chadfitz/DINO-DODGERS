@@ -1,6 +1,6 @@
 # DINO DODGERS
 
-[Click to Play!](https://chadfitz.github.io/DINO-DODGERS/)
+<a href="https://chadfitz.github.io/DINO-DODGERS/" target="_blank">Click to Play!</a>
 
 ## Overview
 
